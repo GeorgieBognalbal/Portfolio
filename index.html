@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bpmf+Iansui&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>DiGiePort</title>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "urCo3yQhn5vY-phGI",
+      });
+   })();
+</script>
+
 </head>
 <body>
 <nav class="top-bar" id="top">
@@ -18,7 +30,7 @@
         <li><a href="#top">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#contact">CONTACT</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
     </ul>
 </nav>
 
@@ -90,13 +102,13 @@
     </div>
 
     <div class="contact-body">
-      <input type="text" placeholder="Enter name">
-      <input type="email" placeholder="Enter email">
+      <input type="text" id="name" placeholder="Enter name" required>
+      <input type="email" id="email" placeholder="Enter email" required>
     </div>
 
     <div class="contact-footer">
-      <input type="text" placeholder="TYPE MESSAGE HERE">
-      <button class="send-btn">➤</button>
+      <input type="text" id="message" placeholder="TYPE MESSAGE HERE">
+      <button class="send-btn" onclick="sendMail()">➤</button>
     </div>
 
   </div>
@@ -117,7 +129,7 @@
                     A responsive personal portfolio built using HTML, CSS,
                     JavaScript, and GSAP animations.
                 </p>
-                <button class="project-btn" data-link="https://github.com/yourrepo1">View Project</button>
+                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/Portfolio">View Project</button>
             </div>
         </div>
 
@@ -128,7 +140,7 @@
                     A c# console-based implementation of the classic Battleship game,
                     featuring a simple AI opponent and a user-friendly interface.
                 </p>
-                <button class="project-btn" data-link="https://github.com/yourrepo1">View Project</button>
+                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/BattleShip">View Project</button>
             </div>
         </div>
 
@@ -139,7 +151,7 @@
                     My personal c# learning journey, showcasing various projects 
                     and exercises to demonstrate my progress and understanding of the language.
                 </p>
-                <button class="project-btn" data-link="https://github.com/yourrepo1">View Project</button>
+                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/Learn-CSharp">View Project</button>
             </div>
         </div>
 

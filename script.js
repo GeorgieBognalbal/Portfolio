@@ -83,3 +83,26 @@ tl.from("#contactCard", {
   duration: 4,
   ease: "power3.out"
 }, "-=0.3");
+
+gsap.to(".project-card", {
+    scrollTrigger: {
+        trigger: ".project-section",
+        start: "top 10%",
+        opacity: 0,
+        y: 100,
+        toggleActions: "play reverse play reverse"
+    },
+    opacity: 1,
+    y: 100
+    });
+
+
+function sendMail() {
+    let params = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        message : document.getElementById("message").value
+    }
+
+    emailjs.send("service_hraqjcs", "template_7mqd91j", params).then(alert("Email Sent!"))
+}
