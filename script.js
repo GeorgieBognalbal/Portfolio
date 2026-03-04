@@ -14,3 +14,72 @@ gsap.fromTo(".main-pic",
     { y: 300}, 
     {y: 0, duration: 1}
 );
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 70%",
+    end: "top 30%",
+    scrub: true
+  }
+})
+
+.to(".about-description", {
+  x: -400,
+  y: -100,
+  ease: "none"
+}, 0)
+
+.to(".about-skills", {
+  x: 100,
+  y: 100,
+  ease: "none"
+}, 0);
+
+gsap.to(".about-title", {
+    scrollTrigger: {
+        trigger: ".about-title",
+        opacity: 0,
+        toggleActions: "restart none none none",
+        scrub: true
+    },
+    opacity: 1,
+    x: 100,
+    y: -10,
+});
+
+gsap.to(".skills-title", {
+    scrollTrigger: {
+        trigger: ".skills-title",
+        opacity: 0,
+        toggleActions: "restart none none none",
+        scrub: true
+    },
+    opacity: 1,
+    x: -100,
+    y: -10, 
+});
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".contact-section",
+    start: "top 40%",
+    end: "top 1%",
+    toggleActions: "play reverse play reverse",
+    scrub: 0.6
+  }
+});
+
+tl.from("#contactCard", {
+  scaleY: 0,
+  duration: 5,
+  ease: "power3.out"
+})
+
+.from("#contactCard > *", {
+  opacity: 0,
+  y: 30,
+  stagger: 0.5,
+  duration: 4,
+  ease: "power3.out"
+}, "-=0.3");
