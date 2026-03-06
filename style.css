@@ -8,10 +8,44 @@ body {
     overflow-x: hidden;
 }
 
+.preload * {
+    animation: none !important;
+    transition: none !important;
+}
+
 p {
     color: #ffffff;
     text-shadow: 0px 1px 4px black;
     padding: 20px;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#000106, #111F35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-text{
+    color: #FCB53B;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background: #ffd369;
+    z-index: 2000;
 }
 
 .top-bar {
@@ -27,6 +61,7 @@ p {
     font-weight: bolder;
     margin-top: 5px;
     color: #FCB53B;
+    
 }
 
 nav ul {
@@ -284,7 +319,7 @@ nav a:hover {
 }
 
 .projects-title {
-    font-size: 40px;
+    font-size: 70px;
     color: #FCB53B;
     margin-bottom: 80px;
     text-shadow: 0px 1px 10px black;
@@ -307,7 +342,8 @@ nav a:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.4);
 }
 
 .project-content h3 {
@@ -323,6 +359,7 @@ nav a:hover {
 
 .project-btn {
     background: #FCB53B;
+    z-index: 1;
     border: none;
     padding: 12px 25px;
     border-radius: 20px;

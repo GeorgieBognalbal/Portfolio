@@ -22,7 +22,12 @@
 </script>
 
 </head>
-<body>
+<body class="preload">
+<div class="loader">
+    <h1 class="loader-text">DiGiePort</h1>
+</div>
+
+<div id="progress-bar"></div>
 <nav class="top-bar" id="top">
     <div class="logo">DiGiePort</div>
 
@@ -73,7 +78,8 @@
                 myself and push myself to learn and understand. My goal 
                 is to become a proficient software developer and 
                 contribute to innovative projects that make a positive 
-                impact. 
+                impact. I'm proficient with computer hardware, skills
+                I've developed throught my shs journey.
             </h4>
         </div>
 
@@ -81,7 +87,7 @@
         <div class="about-skills">
             <h3>
             <span>Programming Languages:</span> C#, java, php<br>
-            <span>Web Development:</span> HTML, CSS, JavaScript<br>
+            <span>Web Development:</span> HTML, CSS, JavaScript, GSAP<br>
             <span>Version Control:</span> Git, GitHub<br>
             <span>Computer Servicing Skills:</span> Troubleshooting, Maintenance, Networking, server administration
             </h3>
@@ -129,7 +135,7 @@
                     A responsive personal portfolio built using HTML, CSS,
                     JavaScript, and GSAP animations.
                 </p>
-                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/Portfolio">View Project</button>
+                <button class="project-btn" onclick="window.open('https://github.com/GeorgieBognalbal/DiGiePort')">View Project</button>
             </div>
         </div>
 
@@ -140,7 +146,7 @@
                     A c# console-based implementation of the classic Battleship game,
                     featuring a simple AI opponent and a user-friendly interface.
                 </p>
-                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/BattleShip">View Project</button>
+                <button class="project-btn" onclick="window.open('https://github.com/GeorgieBognalbal/BattleShip')">View Project</button>
             </div>
         </div>
 
@@ -151,15 +157,13 @@
                     My personal c# learning journey, showcasing various projects 
                     and exercises to demonstrate my progress and understanding of the language.
                 </p>
-                <button class="project-btn" data-link="https://github.com/GeorgieBognalbal/Learn-CSharp">View Project</button>
+                <button class="project-btn" onclick="window.open('https://github.com/GeorgieBognalbal/Learn-CSharp')">View Project</button>
             </div>
         </div>
 
     </div>
 
 </section>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
